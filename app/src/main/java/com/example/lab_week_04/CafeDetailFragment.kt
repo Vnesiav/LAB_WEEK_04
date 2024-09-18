@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 
 private const val TAB_CONTENT = "TAB_CONTENT"
+
 class CafeDetailFragment : Fragment() {
     private var content: String? = null
 
