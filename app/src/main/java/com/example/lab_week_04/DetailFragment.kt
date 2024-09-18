@@ -7,16 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [DetailFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class DetailFragment : Fragment() {
     private val coffeeTitle: TextView?
         get() = view?.findViewById(R.id.coffee_title)
@@ -38,7 +28,7 @@ class DetailFragment : Fragment() {
         setCoffeeData(coffeeId)
     }
 
-    fun setCoffeeData(id: Int){
+    private fun setCoffeeData(id: Int){
         when(id){
             R.id.affogato -> {
                 coffeeTitle?.text = getString(R.string.affogato_title)
@@ -51,6 +41,15 @@ class DetailFragment : Fragment() {
             R.id.latte -> {
                 coffeeTitle?.text = getString(R.string.latte_title)
                 coffeeDesc?.text = getString(R.string.latte_desc)
+            }
+            R.id.macchiato -> {
+                coffeeTitle?.text = getString(R.string.macchiato_title)
+                coffeeDesc?.text = getString(R.string.macchiato_desc)
+            }
+
+            R.id.mocha -> {
+                coffeeTitle?.text = getString(R.string.mocha_title)
+                coffeeDesc?.text = getString(R.string.mocha_desc)
             }
         }
     }
